@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header class="siteHeader">
+
+    </header>
+    <main>
+        <h1>Javascript Sandbox</h1>
+        <ul>
+            <li>The world in context</li>
+            <li>Continent as a whole</li>
+            <li>studying the World</li>
+            <li>A minute Geography</li>
+            <li>the world atlas</li>
+        </ul>
+    </main>
+    <article>
+        <h2>What is Lorem Ipsum?</h2>
+        <img src="https://res.cloudinary.com/wahlly/image/upload/v1612487108/jjjjjj2_efcnll.png" alt="to serve you better" height="200px" width="150px">
+        <strong>Lorem Ipsum</strong> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+    </article>
+    <section class="caseOne">
+        <h2>Where does it come from?</h2>
+        <span class="inner"> Contrary to popular belief, Lorem Ipsum is not simply random text</span>. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+</section>
+    <section class="caseTwo">
+        <h2>Why do we use it?</h2>
+        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+    </section>
+    <section class="caseThree">
+        <h2>Where can I get some?</h2>
+        There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
+    </section>
+
+</body>
+<script>
+//styling using javascript queryselectors...
+document.querySelectorAll("main h1, li, .inner").forEach(item => item.style.backgroundColor="blue")
+document.querySelectorAll("article strong").forEach(item => item.style.backgroundColor="red")
+
+//creating classes using javascript...
+document.querySelector(".caseOne h2").classList.add("location")
+document.querySelector(".caseTwo h2").classList.add("reason")
+document.querySelector(".caseThree h2").classList.add("toGet")
+
+//creating inline stylings using javascript...
+document.querySelector("section .location").style.color='red'
+document.querySelector("section .reason").style.color='blue'
+document.querySelector("section .toGet").style.color='green'
+
+//checking and creating attributes using javascript
+document.querySelector("img");
+
+
+//creating HTML contents using javascript...
+const navcontent = `
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About us</a></li>
+    <li><a href="#">My Track</a></li>
+    <li><a href="#">Resources</a></li>
+    <li><a href="#">contact u</a></li>
+`;
+
+const navBar = document.createElement("Nav")
+navBar.classList.add("navigation")
+const navList = document.createElement("ul")
+navList.innerHTML = navcontent
+navBar.append(navList)
+
+document.querySelector(".siteHeader").append(navBar)
+
+//Object entailing all info about Backend
+    const backEndTrack = {
+    instructor: "LordGape Chesvic",
+    course: {
+        week1: "Internet",
+        week2: "HTML",
+        week3: "CSS",
+        week4: "OS and general knowledge",
+    },
+    members: ["Okeke", "Olawale", "Shobowale", "Vwede", "Shegun",],
+    HOT: "Okeke"
+};
+
+console.log(backEndTrack);
+
+class continent {
+//the constructor takes all the parameters to be used in the class
+    constructor(
+        Africa,
+        Asia,
+        Europe,
+        NorthAmerica,
+        SouthAmerica,
+    )
+//each parameter is being passed to a variable.
+    {
+        this.Africa = Africa;
+        this.Asia = Asia;
+        this.Europe = Europe;
+        this.NorthAmerica = NorthAmerica;
+        this.SouthAmerica = SouthAmerica;
+    }
+//passing method functions into the properties of the CONTINENT class 
+    updateEurope = function (x){
+        this.Europe = x;
+    }
+    updateAsia = function (y) {
+        this.Asia = y;
+    }
+}
+//object created to the class
+    const prac = new continent ("Nigeria", "India", "Germany", "Canada", "Columbia")
+    
+    console.log(prac)
+
+//printing the method function updateAsia to the console.
+    console.log(prac.updateAsia("Japan"));
+    console.log(prac)
+
+//printing the method function updateEurope to the console.
+    console.log(prac.updateEurope("England"));
+    console.log(prac)
+
+    //conditional statements with the use of the assignment and comparison operators
+   
+    //declaring variables x and y
+    let x = 4
+    let y = 8
+    //prints the datatype of each of x and y
+    console.log(`let x:  ${x} (${typeof x})`);
+    console.log(`let y: ${y} (${typeof y})`);
+    //conditional statement to determine what happens in each situation
+    if(x < y){
+        console.log("that was not enough, put in more effort")
+    }   else if(x == y){
+        console.log("that was fair but, you can still do better")
+    }   else{
+        console.log("Great Job")
+    }
+
+//working with arrays...
+Africa = ["Nigeria", "Ghana", "Benin", "Togo", "Egypt"]
+    //prints only the last item of the array
+    console.log(Africa.pop())
+    //displays the array as strings...
+    console.log(Africa.join(" , "))
+
+
+//tells the date of the day.
+    const todaysDate = new Date();
+    console.log(todaysDate.toDateString());
+//working through array...
+    const findItem = Africa.find(item => item === "Benin");
+    console.log("Finally found it, it is: ", findItem);
+
+//using functions with an array
+    let continental = Africa.find(function(item){
+        if(item.length == 4){
+            return item;
+        }
+    })
+    console.log("poorest Country in the list: ", continental)
+    
+
+//declaring functions...
+function calc(x, y) {
+    let z = (x + y)/2
+    return z;
+}
+console.log("The history of this animal dates back to ", calc(15,5), "years ago.");
+
+//an event calculator using the arrowfunction...
+const arrowFunc = () => {
+    let moneyToSpend = 350000;
+    let sports = 20000;
+    let recreation = 75000;
+    let location = 200000;
+    let logistics = 75000;
+    let Total = sports + recreation + location + logistics;
+    let netBalance = moneyToSpend - Total;
+
+    console.log(`
+   Available Amount: ${moneyToSpend}#;
+    Sports: ${sports}#;
+    Recreational Activities: ${recreation};
+    Location: ${location}#;
+    Logistics: ${logistics}#;
+    Total Amount Spent: ${Total}#;
+    Net balance: ${netBalance}#;
+    `)
+}
+    arrowFunc();
+
+
+    const tipCalculator = (a, b) =>{
+        let tip = a*(b/100);
+        let total = a + tip;
+        console.log(`
+            Initial sum: ${a};
+            Tip percentage: ${b}%;
+            Tip: ${tip.toFixed(2)};
+            Total: ${total.toFixed(2)};
+        `)
+    }
+
+    tipCalculator(10, 20);
+
+   /** const formatter = () =>{
+        let formattedValue = "new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'EUR' }).format(number) "
+        return formattedValue
+    };
+
+    const mechanics = (x, y, z) =>{
+
+      }*/
+
+// making use of the switch statements...
+      const alpha = (x) =>{
+          let status;
+        switch(true) {
+            case x < 20:
+                status = "sorry, you failed ):"
+               break; 
+            case x > 20 && x < 30:
+                status = "This is poor. ):"
+                break;
+            case x > 30 && x < 45:
+                status = "ouch ): just a little more effort needed from you. try again."
+                break;
+            case x > 46 && x < 60:
+                status = "this is fair but, you can do better."
+                break;
+            case x > 60 && x < 80:
+                status = "Very good"
+                break;
+            default:
+                console.log("Bravo!!. Excellent");
+
+        }
+        console.log(`
+        Score: ${x};
+        Remark: ${status};
+        `)
+      }
+    alpha(43);
+
+//func expects 3 parameters with the first two being numbers and the last being either a multiply, sum or divide with different conditions in each conditions.
+
+    function func(input_1, input_2, input_3){
+        if(input_3 === "multiply"){
+            return input_1 * input_2;
+        }
+        else if(input_3 === "divide"){
+            return input_1 / input_2;
+        }
+        else if(input_3 === "sum"){
+            return input_1 + input_2;
+        } else{console.log("please, enter a valid option.")}
+    }
+    console.log(func(4,5, 'multiply'));
+
+//using the switch statements...
+    const mathOperation = (user_1, user_2, user_3) => {
+        switch(true){
+            case user_3 === "multiply":
+                return user_1 * user_2
+                break;
+            case user_3 === "divide":
+                return user_1 / user_2
+                break;
+            case user_3 === "sum":
+                return user_1 + user_2
+                break;
+            default: console.log("please, enter a valid option.")
+        }
+       
+    }
+    console.log(mathOperation(2,3,"divide"));
+
+
+
+</script>
+</html>
