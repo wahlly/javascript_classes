@@ -1,32 +1,32 @@
 
 //func expects 3 parameters with the first two being numbers and the last being either a multiply, sum or divide with different conditions in each conditions.
 
-function calculate(numberOne, numberTwo, string){
+function calculate(firstNumber, secondNumber, string){
     if(string === "multiply"){
-        return numberOne * numberTwo;
+        return firstNumber * secondNumber;
     }
-    else if(string === "divide"){
-        return numberOne / numberTwo;
+     if(string === "divide"){
+        return firstNumber / secondNumber;
     }
-    else if(string === "sum"){
-        return numberOne + numberTwo;
-    } else{console.log("please, enter a valid option.")}
+     if(string === "sum"){
+        return firstNumber + secondNumber;
+    } 
 }
 console.log(calculate(4,5, 'multiply'));
 console.log(calculate(4,5, "divide"));
 console.log(calculate(4,5, "sum"));
 
 //using the switch statements...
-const calculator = (numOne, numTwo, myString) => {
+const calculator = (numberOne, numberTwo, myString) => {
     switch(true){
         case myString === "multiply":
-            return numOne * numTwo
+            return numberOne * numberTwo
             break;
         case myString === "divide":
-            return numOne / numTwo
+            return numberOne / numberTwo
             break;
         case myString === "sum":
-            return numOne + numTwo
+            return numberOne + numberTwo
             break;
         default: console.log("please, enter a valid option.")
     }
