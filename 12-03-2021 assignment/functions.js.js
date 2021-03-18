@@ -35,3 +35,9 @@ const calculator = (numberOne, numberTwo, myString) => {
 console.log(calculator(2,3,"divide"));
 console.log(calculator(2,3, "sum"));
 console.log(calculator(2,3, "multiply"));
+
+
+
+const takeNumber = (x, b) => {
+    let 
+}
